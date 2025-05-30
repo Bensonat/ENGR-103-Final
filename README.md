@@ -1,5 +1,8 @@
 # ENGR-103-Final
 Rhythm Game
 
-I am editing this file for no particualar reason
-Whooooooooooooo
+# Dependancies
+[Adafruit CircutPlayground](https://github.com/adafruit/Adafruit_CircuitPlayground)
+[Async Delay](https://github.com/stevemarple/AsyncDelay)
+# Rules
+Yada yada
