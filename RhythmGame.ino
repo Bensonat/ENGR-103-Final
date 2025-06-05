@@ -20,7 +20,7 @@ volatile bool ScoreBlue;
 
 int PlayArray[numGames + 1][50][2] = {
   {// 0=nothing, 1=red, 2=blue, 3=purple, 4=end
-    {200, 0},
+    {100, 0},
     {0, 127},
     {0, 127},
     {0, 127},
@@ -178,7 +178,7 @@ void loop() {
       }
       else{
         GamePlayVisuals();
-        CircuitPlayground.playTone(PlayArray[GameSelect][PlayArrayIndex][1], 1.5 * PlayArray[GameSelect][PlayArrayIndex][0], false); 
+        CircuitPlayground.playTone(midi[PlayArray[GameSelect][PlayArrayIndex][1]], 1.5 * PlayArray[GameSelect][0][0], false); 
       }
       BPM.start(PlayArray[GameSelect][0][0], AsyncDelay::MILLIS);
       GameOnState = !GameOnState;
