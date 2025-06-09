@@ -8,7 +8,7 @@ int A_four = 440; // a is 440 hz...
 
 volatile int GameSelect = 0;
 const int numGames = 2; // input the total number of playable levels here, counting 0.
-String NameSelect[numGames + 1] = {"Hot Cross Buns", "Test 1", "Test 2"}; // name the playable levels
+String NameSelect[numGames + 1] = {"Hot Cross Buns", "Lost Lady Found", "Test 1"}; // name the playable levels
 
 volatile bool GameOn = false; // Are we in a game orin the menu?
 
@@ -17,8 +17,9 @@ volatile bool PauseOn = false; //Should the game be paused?
 volatile bool ScoreRed; //Used for purple scoring
 volatile bool ScoreBlue;
 
+int x = 0;
 
-int PlayArray[numGames + 1][50][2] = {
+int PlayArray[numGames + 1][110][2] = {
   //First level array is for which level we're in, second is for what note in that game we're on, and third specifies the light color or midi note
   // 0=nothing, 1=red, 2=blue, 3=purple, 4=end
   {
@@ -66,11 +67,125 @@ int PlayArray[numGames + 1][50][2] = {
     {4, 127}
   },
   {
-    {1, 0}, // empty level
+    {68, 0},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 58}, // start A section
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {3, 62},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {3, 60},
+    {0, 127}, // end A section
+    {1, 67},
+    {0, 127},
+    {1, 67},
+    {2, 65},
+    {1, 62},
+    {2, 63},
+    {3, 60},
+    {0, 127},
+    {0, 127},
+    {0, 127}, // end B section
+    {0, 58}, // start A section
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {3, 62},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {3, 60},
+    {0, 127}, // end A section
+    {1, 67},
+    {0, 127},
+    {2, 70},
+    {1, 69},
+    {2, 67},
+    {1, 65},
+    {3, 67},
+    {0, 127},
+    {0, 127}, // end C section
+    {0, 65},
+    {0, 65},
+    {1, 67},
+    {0, 127},
+    {1, 67},
+    {0, 127},
+    {3, 72},
+    {0, 127},
+    {2, 67},
+    {0, 127},
+    {2, 67},
+    {0, 127},
+    {3, 69},
+    {0, 127},
+    {1, 65},
+    {0, 127},
+    {1, 65},
+    {0, 127},
+    {2, 62},
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {0, 127},
+    {0, 127}, // end D section
+    {0, 58}, // start A section
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {1, 60},
+    {0, 127},
+    {3, 62},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {2, 58},
+    {0, 127},
+    {3, 60},
+    {0, 127}, // end A section
+    {1, 67},
+    {0, 127},
+    {1, 67},
+    {2, 65},
+    {1, 62},
+    {2, 63},
+    {3, 60},
+    {0, 127},
+    {0, 127},
+    {0, 127}, // end B section
     {4, 127}
   },
   {
     {1, 0}, // empty level
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
+    {0, 127},
     {4, 127}
   }
 };
